@@ -14,7 +14,7 @@ app.use(express.json());  // Middleware to parse incoming JSON request bodies.
 app.use(cors());
 
 // URL for connecting to RabbitMQ (localhost means it's running locally).
-const RABBITMQ_URL = process.env.RABBITMQ_URL || 'amqp://localhost';
+const RABBITMQ_URL = process.env.RABBITMQ_CONNECTION_STRING || 'amqp://localhost';
 
 // Define a POST route for creating orders
 // This route is accessed when a client (e.g., frontend) sends an order.
